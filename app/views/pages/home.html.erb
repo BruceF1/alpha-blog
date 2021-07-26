@@ -1,33 +1,24 @@
 <!--header-->
-<header style="background-color:grey;">
-  <h2> Home Page </h2>
+<header style="background-color:#f9f9f9;">
+
 </header>
 
 <!--contains two columns-->
-<div class="container" >
+<div class="container"  >
 <div class="row">
-  <!--column one-->
-  <div class="col-sm" style="background-color:blue;">
-    <ul class="nav flex-column">
-<li class="nav-item">
-  <a class="nav-link" <%= link_to 'Articles listing', articles_path %></a>
-</li>
-<li class="nav-item">
-  <a class="nav-link" <%= link_to 'About page', about_path %></a>
-</li>
-</ul>
-    col 1
+    <!--column one-->
+  <div class="col-sm p-4 text-end" style="background-color:#f9f9f9;">
+      <h1> Alpha Blog </h1>
+      <%= render 'layouts/navigation' %>
+
   </div>
     <!--column two-->
-  <div class="col-sm"style="background-color:red;">
+  <div class="col-sm p-4"style="background-color:red;">
     col 2
   </div>
 </div>
 </div>
 <!--footer-->
-<footer style="background-color:orange;" >
-  some bs
+<footer class="text-center" style="background-color:#f9f9f9;" >
+  <%= render 'layouts/footer' %>
 </footer>
-
-<%= link_to 'Articles listing', articles_path %> |
-<%= link_to 'About page', about_path %>

@@ -1,4 +1,45 @@
 
+h1
+  {
+    font-family: 'Halant', serif;
+    font-weight: bold
+  }
+h2
+  {
+    color: #444;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+p
+  {
+    color: #444;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+
+a
+  {
+    color: #444;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+
+li
+  {
+    color: #444;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+
+
+header
+{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+footer
+{ 
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 .navbar{
   background-color: #4286f4 !important;
 }
