@@ -15,10 +15,14 @@ p
     font-family: 'Nunito Sans', sans-serif;
   }
 
-a
-  {
-    color: #444;
-    font-family: 'Nunito Sans', sans-serif;
+  a:link, a:visited {
+  color: #444;
+  text-decoration: none;
+  display: inline-block;
+  }
+
+  a:hover, a:active {
+    color: #444
   }
 
 li
@@ -35,11 +39,17 @@ header
 }
 
 footer
-{ 
+{
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
 .navbar{
   background-color: #4286f4 !important;
+}
+
+.page_header {
+  font-family: 'Halant', serif;
+  font-weight: bold ;
+  font-size: 40px ;
 }
