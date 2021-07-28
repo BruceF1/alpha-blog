@@ -1,15 +1,18 @@
 <h1>Articles Listing</h1>
 
 <% @articles.each do |article| %>
-<div class="card">
-  <h5 class="card-header"><%= article.title %></h5>
+  <div class=" mt-4">
+  <div class="card">
+  <h5 class="card-header"><%= link_to article.title, article_path(article) %></h5>
   <div class="card-body">
-    <h5 class="card-title"><%= article.description %></h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <p class="card-text"><%= truncate(article.description,length:50) %></p>
+    <h5><%= link_to 'View article', article_path(article) %></h5>
     <td><%= link_to 'Show', article_path(article) %></td>
     <td><%= link_to 'Edit', edit_article_path(article) %></td>
     <td><%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: "Are you sure?"} %></td>
-
+    <br>
+    <small>Created <%= time_ago_in_words(article.created_at) %> ago,
+      Edited <%= time_ago_in_words(article.updated_at) %> ago </small>
   </div>
 </div>
 <% end %>
