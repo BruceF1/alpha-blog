@@ -11,7 +11,7 @@ h2
   }
 p
   {
-    color: #444;
+    color: #686868;
     font-family: 'Nunito Sans', sans-serif;
   }
 
@@ -22,7 +22,7 @@ p
   }
 
   a:hover, a:active {
-    color: #444
+    color: #000
   }
 
 li
@@ -52,4 +52,8 @@ footer
   font-family: 'Halant', serif;
   font-weight: bold ;
   font-size: 40px ;
+}
+
+#page-content {
+  background-color: #f9f9f9;
 }

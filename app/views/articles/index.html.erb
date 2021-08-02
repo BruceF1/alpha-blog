@@ -10,6 +10,7 @@
   </thead>
 
   <tbody>
+
     <% @articles.each do |article| %>
       <tr>
         <td><%= article.title %></td>
@@ -21,7 +22,7 @@
       </tr>
       <% end %>
   </tbody>
-</table>
+  </table>
 <p>
   <td><%= link_to 'Create new article', new_article_path %></td>
 </p>
