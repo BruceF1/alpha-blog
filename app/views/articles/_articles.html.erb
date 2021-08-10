@@ -11,7 +11,7 @@
       <td><%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: "Are you sure?"} %></td>
       <br>
       <small>Created <%= time_ago_in_words(article.created_at) %> ago,
-      Edited <%= time_ago_in_words(article.updated_at) %> ago, by <%= article.user.username if article.user %></small>
+      Edited <%= time_ago_in_words(article.updated_at) %> ago, by <%= link_to article.user.username,user_path(article.user) if article.user %></small>
    </div>
 </div>
 <% end %>

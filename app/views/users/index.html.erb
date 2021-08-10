@@ -1,0 +1,15 @@
+<div class="container">
+  <h1 class="text-center mt-4">User Listing</h1>
+  <% @users.each do |user| %>
+  <div class=" mt-4">
+  <div class="card">
+     <h5 class="card-header"><%= link_to user.username, user_path(user) %></h5>
+     <div class="card-body">
+        <h5><%= link_to 'View profile', user %></h5>
+        <td><%= link_to 'Edit profile', edit_user_path(user) %></td>
+        <br>
+        <small>Joined <%= time_ago_in_words(user.created_at) %> ago and has <%= pluralize(user.articles.count, "article") %></small>
+     </div>
+  </div>
+</div>
+<% end %>
