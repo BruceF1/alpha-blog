@@ -23,13 +23,15 @@
          <%= f.password_field :password, class: "form-control" , placeholder: "Enter a password" %>
       </div>
    </div>
-   <br>
-   <div class="row justify-content-center text-dar">
+   <div class="col-10 my-3">
+   <%= link_to "Delete account and associated articles", user_path(current_user), method: :delete, data: {confirm: "Are you sure?"} %>
+   </div>
+   <div class="row justify-content-center text-dark my-3">
      <div class="form-group row">
         <%= f.submit(@user.new_record? ? "Sign up" : "Update account", class: "btn btn-outline-dark btn-lg") %>
      </div>
-     <%= link_to 'Return to articles listing', root_path %>
-     <% end %>
    </div>
+   <%= link_to 'Return to articles listing', root_path %>
+   <% end %>
 </div>
 </div
