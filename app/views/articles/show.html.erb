@@ -3,8 +3,10 @@
     <div class="col-sm p-4"
       <p><strong>Title: </strong><%= @article.title %></p>
       <p><strong>Description:</strong><%= @article.description %></p>
-      <%= link_to 'Edit', edit_article_path(@article) %> |
-      <%= link_to 'Delete', root_path(@article), method: :delete, data: { confirm: "Are you sure?"} %> |
+      <% if logged_in? && @article.user == current_user %>
+        <%= link_to 'Edit', edit_article_path(@article) %> |
+        <%= link_to 'Delete', root_path(@article), method: :delete, data: { confirm: "Are you sure?"} %> |
+      <% end %>
       <%= link_to 'Return to articles listing', root_path %>
       <br>
       <small>Created <%= time_ago_in_words(@article.created_at) %> ago,
