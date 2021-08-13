@@ -1,12 +1,9 @@
 <div class="container">
-<h1 class="text-center mt-4"><%= @user.username %>'s profile</h1>
-
-<%= robohash @user %>
-
-<p class="text-center mt-4">
-  <%= link_to "Edit your profile", edit_user_path(@user)%>
-</p>
-
-
-<%= render 'articles/articles' %>
+  <h1 class="text-center mt-4"><%= @user.username %>'s profile</h1>
+    <%= robohash @user %>
+  <p class="text-center mt-4">
+    <%= link_to "Edit your profile", edit_user_path(@user)%>
+  </p>
+    <%= render 'articles/articles' %>
+    <%= link_to 'Return home', root_path %>
 </div>

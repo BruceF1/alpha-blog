@@ -1,16 +1,24 @@
 <%= link_to "Alpha Blog", root_path, class: "page_header" %>
 <ul class="nav flex-column">
+
   <li class="nav-item">
-    <%= link_to 'About Page', about_path, class: "nav-link" %>
-  </li>
-  <li class="nav-item">
-    <%= link_to 'Login', login_path, class: "nav-link" %>
+    <% if logged_in? %>
+    <p> You are logged in as:<strong><%= link_to current_user.username, user_path(current_user), class: "nav-link" %></strong></p>
   </li>
   <li class="nav-item">
     <%= link_to 'Logout', logout_path, class: "nav-link", method: :delete %>
   </li>
+  <% else %>
+  <li class="nav-item">
+    <%= link_to 'Login', login_path, class: "nav-link" %>
+  </li>
   <li class="nav-item">
     <%= link_to 'Sign Up', signup_path, class: "nav-link" %>
+  </li>
+  <% end %>
+
+  <li class="nav-item">
+    <%= link_to 'About Page', about_path, class: "nav-link" %>
   </li>
   <li class="nav-item">
     <%= link_to 'All Users', users_path, class: "nav-link" %>
