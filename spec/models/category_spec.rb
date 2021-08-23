@@ -6,6 +6,10 @@ RSpec.describe Category, type: :model do
     @category = Category.new(name: "Sports")
   end
 
+  it "should create category" do
+
+  end
+
   it "Category should be valid" do
   #  @category = Category.new(name: "Sports")
     expect(@category).to be_valid
