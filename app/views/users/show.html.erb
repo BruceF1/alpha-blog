@@ -4,7 +4,11 @@
   <p class="text-center mt-4">
     <% if logged_in? && @user == current_user %>
       <%= link_to "Edit your profile", edit_user_path(@user)%>
+      <div class="col-10 my-3">
+      <%= link_to "Delete account and associated articles", user_path(current_user), method: :delete, data: {confirm: "Are you sure?"} %>
+      </div>
     <% end %>
+
   </p>
     <%= render 'articles/articles' %>
     <%= link_to 'Return home', root_path %>
